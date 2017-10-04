@@ -1,0 +1,45 @@
+{
+  "name": "black-bits/tell-service",
+  "description": "Send messages for remote tasks to another service",
+  "license": "MIT",
+  "homepage": "https://github.com/black-bits/tell-service",
+  "support": {
+    "issues": "https://github.com/black-bits/tell-service/issues",
+    "source": "https://github.com/black-bits/tell-service"
+  },
+  "authors": [
+    {
+      "name": "Oliver Heck",
+      "email": "mail@oliverheck.de"
+    },
+    {
+      "name": "Andreas Przywara",
+      "email": "andreas.przywara@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "illuminate/support": "^5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "BlackBits\\TellService\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BlackBits\\TellService\\TellServiceServiceProvider"
+      ],
+      "aliases": {
+        "TellService": "BlackBits\\TellService\\TellServiceFacade"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
